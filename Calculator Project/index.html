@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+<body>
+<form name="Calc">
+<table border=4>
+	<tr>
+		<td>
+			<input id="answerfield" type="text" name="Input">
+	<tr>
+		<td>
+		<input class="buttons one"     type="button"   value="  1  " OnClick="Calc.Input.value += '1'"> 
+		<input class="buttons two"     type="button"   value="  2  " OnCLick="Calc.Input.value += '2'">
+		<input class="buttons three"   type="button"   value="  3  " OnClick="Calc.Input.value += '3'">
+		<input class="buttons plus"    type="button"   value="  +  " OnClick="Calc.Input.value += ' + '">
+	<br>
+		<input class="buttons four"    type="button"   value="  4  " OnCLick="Calc.Input.value += '4'">
+		<input class="buttons five"    type="button"   value="  5  " OnClick="Calc.Input.value += '5'"> 
+		<input class="buttons six"     type="button"   value="  6  " OnCLick="Calc.Input.value += '6'">
+		<input class="buttons minus"   type="button"   value="  -  " OnClick="Calc.Input.value += ' - '">
+	<br>
+		<input class="buttons seven"   type="button"   value="  7  " OnCLick="Calc.Input.value += '7'">
+		<input class="buttons eight"   type="button"   value="  8  " OnClick="Calc.Input.value += '8'"> 
+		<input class="buttons nine"    type="button"   value="  9  " OnCLick="Calc.Input.value += '9'">
+		<input class="buttons times"   type="button"   value="  ×  " OnClick="Calc.Input.value += ' * '">
+	<br>
+		<input class="buttons zero"    type="button"   value="  0  " OnCLick="Calc.Input.value += '0'">
+		<input class="buttons decimal" type="button"   value="  .  " OnClick="Calc.Input.value += '.'">
+		<input class="buttons clear"   type="button"   value="  C  " OnClick="Calc.Input.value = ''">
+		<input class="buttons divide"  type="button"   value="  /  " OnClick="Calc.Input.value += ' / '">
+	<br>
+		<input class="buttons average" type="button"   value=" AVG " OnClick="avg()">
+		<input class="buttons equal"   type="button"   value="  =  " OnClick="Calc.Input.value = eval(Calc.Input.value)">
+	</tr>
+</table>
+</form>
+<script>
+var array = [];
+
+function avg() {
+	var values = document.getElementById("answerfield");
+	values.split('+');
+	array.push(ParseInt(values));	
+	var sum;
+	for (var i=0; i<array.length; i++) {
+		sum+=array[i];
+	}
+	var averageValue = sum/(array.length);
+	Calc.Input.value = averageValue;
+}
+</script>
+</body>
+</html>

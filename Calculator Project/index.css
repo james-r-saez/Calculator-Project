@@ -1,0 +1,48 @@
+*{
+	font-family: 'Ubuntu';
+	font-size: 30px;
+}
+form {
+	transform: translateY(20%);
+}
+body {
+
+    background:url("wallpaper.jpg");
+    background-position: center;
+    background: cover;
+}
+table {
+	margin: 0 auto;
+	padding: 2px;
+	background-color: rgba(143, 74, 17,.4);
+	width:150px;
+	height:100px;
+	text-align: center;
+    border-radius: 10px;
+}
+.buttons:hover {
+    background-color: #FFE100;
+    color: black;
+}
+#answerfield {
+	background-color: #8F3C00;
+    color: #FFFFFF;
+    padding: 15px;
+    border-radius: 10px;
+    margin:10px;
+}
+.buttons {
+    background-color: #FF8100;
+    color: #FFFFFF;
+    padding: 0px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+}
+.average {
+    width: 115px;
+}
+.equal {
+    width: 180px;
+}
